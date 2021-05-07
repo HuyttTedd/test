@@ -1,0 +1,255 @@
+
+<h2>Animated Collapsibles</h2>
+<button id="read-all">Đọc tất cả</button>
+<p>Chọn từ nối:</p>
+<div>
+    <select name="" id="">
+        <option value="">~ không chọn ~</option>
+        <option value="">nghĩa là</option>
+    </select>
+</div>
+<div class="word-container">
+<!-- count word -->
+    <span class="hidden-word word">
+            <?php
+            $txt=htmlspecialchars('Từ thứ nhất');
+            $txt=rawurlencode($txt);
+            $url = file_get_contents('https://translate.google.com/translate_tts?ie=UTF-8&client=gtx&q='.$txt.'&tl=vi-VN');
+            $player="<audio class='audio-read-word' id='audio1' controls='controls'><source src='data:audio/mpeg;base64,".base64_encode($url)."'></audio>";
+            echo $player;
+            ?>
+        </span>
+<!-- end count word -->
+    <button class="collapsible">tissue</button>
+    <div class="content">
+<!-- main word -->
+        <span class="hidden-word word">
+            <?php
+                $txt=htmlspecialchars('tissue');
+                $txt=rawurlencode($txt);
+                $url = file_get_contents('https://translate.google.com/translate_tts?ie=UTF-8&client=gtx&q='.$txt.'&tl=en');
+                $player="<audio class='audio-read-word' id='audio2' controls='controls'><source src='data:audio/mpeg;base64,".base64_encode($url)."'></audio>";
+                echo $player;
+            ?>
+        </span>
+<!-- end main word -->
+        <table border="1">
+            <tr>
+                <!-- linking words -->
+                <span class="hidden-word word">
+                    <?php
+                    $txt=htmlspecialchars('Nghĩa của từ');
+                    $txt=rawurlencode($txt);
+                    $url = file_get_contents('https://translate.google.com/translate_tts?ie=UTF-8&client=gtx&q='.$txt.'&tl=vi');
+                    $player="<audio class='audio-read-word' id='audio3' controls='controls'><source src='data:audio/mpeg;base64,".base64_encode($url)."'></audio>";
+                    echo $player;
+                    ?>
+                </span>
+                <!-- end linking words -->
+                <!-- meaning words -->
+                <span class="hidden-word word">
+                    <?php
+                    $txt=htmlspecialchars('khăn giấy');
+                    $txt=rawurlencode($txt);
+                    $url = file_get_contents('https://translate.google.com/translate_tts?ie=UTF-8&client=gtx&q='.$txt.'&tl=vi');
+                    $player="<audio class='audio-read-word' id='audio4' controls='controls'><source src='data:audio/mpeg;base64,".base64_encode($url)."'></audio>";
+                    echo $player;
+                    ?>
+                </span>
+                <!-- end meaning word -->
+                <!-- class word -->
+                <span class="hidden-word word">
+                    <?php
+                    $txt=htmlspecialchars('Từ loại');
+                    $txt=rawurlencode($txt);
+                    $url = file_get_contents('https://translate.google.com/translate_tts?ie=UTF-8&client=gtx&q='.$txt.'&tl=vi');
+                    $player="<audio class='audio-read-word' id='audio5' controls='controls'><source src='data:audio/mpeg;base64,".base64_encode($url)."'></audio>";
+                    echo $player;
+                    ?>
+                </span>
+                <!-- end class word -->
+                <!-- meaning words -->
+                <span class="hidden-word word">
+                    <?php
+                    $txt=htmlspecialchars('danh từ');
+                    $txt=rawurlencode($txt);
+                    $url = file_get_contents('https://translate.google.com/translate_tts?ie=UTF-8&client=gtx&q='.$txt.'&tl=vi');
+                    $player="<audio class='audio-read-word' id='audio6' controls='controls'><source src='data:audio/mpeg;base64,".base64_encode($url)."'></audio>";
+                    echo $player;
+                    ?>
+                </span>
+                <!-- end meaning words -->
+                <!-- meaning words -->
+                <span class="hidden-word word">
+                    <?php
+                    $txt=htmlspecialchars('Câu ví dụ');
+                    $txt=rawurlencode($txt);
+                    $url = file_get_contents('https://translate.google.com/translate_tts?ie=UTF-8&client=gtx&q='.$txt.'&tl=vi');
+                    $player="<audio class='audio-read-word' id='audio7' controls='controls'><source src='data:audio/mpeg;base64,".base64_encode($url)."'></audio>";
+                    echo $player;
+                    ?>
+                </span>
+                <!-- end meaning words -->
+                <!-- meaning words -->
+                <span class="hidden-word word">
+                    <?php
+                    $txt=htmlspecialchars('tissue is dirty!');
+                    $txt=rawurlencode($txt);
+                    $url = file_get_contents('https://translate.google.com/translate_tts?ie=UTF-8&client=gtx&q='.$txt.'&tl=en');
+                    $player="<audio class='audio-read-word' id='audio8' controls='controls'><source src='data:audio/mpeg;base64,".base64_encode($url)."'></audio>";
+                    echo $player;
+                    ?>
+                </span>
+                <!-- end meaning words -->
+                <!-- meaning words -->
+                <span class="hidden-word word">
+                    <?php
+                    $txt=htmlspecialchars('Nghĩa câu ví dụ');
+                    $txt=rawurlencode($txt);
+                    $url = file_get_contents('https://translate.google.com/translate_tts?ie=UTF-8&client=gtx&q='.$txt.'&tl=vi');
+                    $player="<audio class='audio-read-word' id='audio9' controls='controls'><source src='data:audio/mpeg;base64,".base64_encode($url)."'></audio>";
+                    echo $player;
+                    ?>
+                </span>
+                <!-- end meaning words -->
+                <!-- meaning words -->
+                <span class="hidden-word word">
+                    <?php
+                    $txt=htmlspecialchars('khăn giấy sạch');
+                    $txt=rawurlencode($txt);
+                    $url = file_get_contents('https://translate.google.com/translate_tts?ie=UTF-8&client=gtx&q='.$txt.'&tl=vi');
+                    $player="<audio class='audio-read-word' id='audio10' controls='controls'><source src='data:audio/mpeg;base64,".base64_encode($url)."'></audio>";
+                    echo $player;
+                    ?>
+                </span>
+                <!-- end meaning words -->
+                <td class="break-word word-attribute">Nghĩa của từ</td>
+                <td class="break-word">khăn giấy</td>
+            </tr>
+            <tr>
+                <td class="break-word word-attribute">Từ loại</td>
+                <td class="break-word">danh từ</td>
+            </tr>
+            <tr>
+                <td class="break-word word-attribute">Câu ví dụ</td>
+                <td class="break-word">tissue is dirty!</td>
+            </tr>
+            <tr>
+                <td class="break-word word-attribute">Nghĩa câu ví dụ</td>
+                <td class="break-word">khăn giấy sạch</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<div class="word-container">
+    <button class="collapsible">tree</button>
+    <div class="content">
+        <table border="1">
+            <tr>
+                <td class="break-word word-attribute">Nghĩa của từ</td>
+                <td class="break-word">cây</td>
+                <td class="read-word">
+                    <?php
+                    $txt=htmlspecialchars('cây chim bồ câu');
+                    $txt=rawurlencode('cây chim bồ câu');
+                    $url = file_get_contents('https://translate.google.com/translate_tts?ie=UTF-8&client=gtx&q='.$txt.'&tl=vi-VN');
+                    $player="<audio class='audio-read-word' id='audio1' controls='controls'><source src='data:audio/mpeg;base64,".base64_encode($url)."'></audio>";
+                    echo $player;
+                    ?>
+                    <i class="fa fa-play-circle" id="play-icon1" aria-hidden="true" style="font-size:3.24em;"></i>
+                    <i class="fa fa-pause-circle" id="pause-icon1" aria-hidden="true" style="font-size:3.24em;"></i>
+                </td>
+            </tr>
+            <tr>
+                <td class="break-word word-attribute">Từ loại</td>
+                <td class="break-word">danh từ</td>
+            </tr>
+            <tr>
+                <td class="break-word word-attribute">Câu ví dụ</td>
+                <td class="break-word">tree is high!</td>
+            </tr>
+            <tr>
+                <td class="break-word word-attribute">Nghĩa câu ví dụ</td>
+                <td class="break-word">cây sạch</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+
+    for (let i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+
+    var readWord = document.getElementsByClassName("word");
+    var readAll = document.getElementById("read-all");
+
+    readAll.addEventListener('click', function () {
+        var getAllAudio = document.getElementsByClassName('audio-read-word');
+        getAllAudio[0].play();
+        for (let j = 0; j < getAllAudio.length; j++) {
+            getAllAudio[j].addEventListener("ended", function () {
+                getAllAudio[j+1].play();
+            });
+        }
+    });
+    // readAll.addEventListener('click', function () {
+    //     readAllWord(1, 10);
+    // });
+    //
+    // function readAllWord(from, to) {
+    //     if(from > to) {
+    //          return;
+    //     }
+    //     let read = document.getElementById("audio"+from);
+    //     read.play();
+    //     read.addEventListener("ended", function () {
+    //         from += 1;
+    //         readAllWord(from, to);
+    //     });
+    // }
+
+    require([
+        'jquery',
+        'jquery/ui'
+    ], function($){
+        jQuery(document).ready( function() {
+            //play all
+            $("#read-all").click(function(){
+
+            });
+            //play audio and show/hide button
+            $("#play-icon1").click(function(){
+                $("#audio1")[0].play();
+                $("#play-icon1").hide();
+                $("#pause-icon1").show();
+            });
+
+            //pause audio and show/hide button
+            $("#pause-icon1").click(function(){
+                $("#play-icon1").show();
+                $("#pause-icon1").hide();
+                $("#audio1")[0].pause();
+            });
+
+            $("#audio1")[0].addEventListener('ended', function() {
+                $("#play-icon1").show();
+                $("#pause-icon1").hide();
+            }, false);
+        });
+    });
+</script>
